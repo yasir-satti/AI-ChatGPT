@@ -3,7 +3,7 @@ import './App.css'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = "";
 console.log(OPENAI_API_KEY);
 const chatGPTurl = "https://api.openai.com/v1/chat/completions";
 const headers = {
