@@ -10,6 +10,9 @@ in project directory install dependecies
 
 ```npm install```
 
+You need OpenAI API key. You can look [here](https://www.onmsft.com/how-to/how-to-get-an-openai-api-key/) how to get it. Then create .env file in project root. Add OPENAI_API_KEY=<your-openai-api-key>
+
+
 Then run the app
 ```npm run start```
 

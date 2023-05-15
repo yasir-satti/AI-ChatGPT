@@ -11,6 +11,8 @@ in project directory install dependecies
 
 ```npm install```
 
+You need OpenAI API key. You can look [here](https://www.onmsft.com/how-to/how-to-get-an-openai-api-key/) how to get it. Then insert in App.jsx file
+
 Then run the app
 ```npm run dev```
 
