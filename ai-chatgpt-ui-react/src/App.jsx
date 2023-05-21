@@ -1,10 +1,10 @@
+import process from 'vite'
 import { useState } from 'react'
 import './App.css'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 
-const OPENAI_API_KEY = "";
-console.log(OPENAI_API_KEY);
+const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 const chatGPTurl = "https://api.openai.com/v1/chat/completions";
 const headers = {
   "Content-Type": "application/json",
@@ -43,7 +43,7 @@ function App() {
 
     const systemMessage = {
       "role": "system",
-      "content": "Explain all concepts like I am a software eningeer with 1 years experience of software development"
+      "content": "Explain all concepts like I am a new home owner"
     };
 
     // chatMessages { sender: "user" or "ChatGPT", message: "The messgae content here" }
@@ -61,7 +61,7 @@ function App() {
 
     const apiRequestBody = {
       "model": model,
-      "messages": [systemMessage, ...apiMessages]
+      "messages": [systemMessage, ...apiMessages],
     }
 
     await fetch(chatGPTurl, {
